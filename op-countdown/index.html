@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تعداد ون بيس</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bahij+Nassim:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8">
+    <meta name="description" content="التعداد التنازلي لعودة أنمي ون بيس (إبريل 2025)"/>
+    <meta name="keywords" content="hunter x hunter,hiatus,hiatuses,hiato,hiatos,gráfico,chart,togashi"/>
+    <meta property="og:url" content="https://fiberahmed.com/op-countdown"/>
+    <meta property="og:title" content="تعداد تنازلي"/>
+    <meta property="og:description" content="التعداد التنازلي لعودة أنمي ون بيس (إبريل 2025)"/>
+    <meta property="og:image" content="https://raw.githubusercontent.com/FiberAhmed/op-countdown/refs/heads/main/images/icon.PNG"/>
+    <style>
+        @font-face {
+            font-family: 'Bahij Nassim';
+            font-weight: 700;
+            src: url('https://fonts.gstatic.com/s/bahjnassim/v1/7cHlqDbsz5iN0TgZS3RqRg.woff2') format('woff2');
+        }
+        body {
+            font-family: 'Bahij Nassim', Arial, sans-serif;
+            font-weight: 700;
+            background-image: url('/images/OP.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            direction: rtl;
+        }
+        #countdown {
+            background-color: rgba(26, 26, 46, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .time-unit {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 2.5em;
+            color: #00b4d8;
+        }
+        .label {
+            font-size: 0.5em;
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">
+        <div class="time-unit">
+            <span id="days">00</span>
+            <span class="label">يوم</span>
+        </div>
+        <div class="time-unit">
+            <span id="hours">00</span>
+            <span class="label">ساعة</span>
+        </div>
+        <div class="time-unit">
+            <span id="minutes">00</span>
+            <span class="label">دقيقة</span>
+        </div>
+        <div class="time-unit">
+            <span id="seconds">00</span>
+            <span class="label">ثانية</span>
+        </div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date('2025-04-06T14:15:00');
+            const now = new Date();
+            const difference = targetDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
