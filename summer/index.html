@@ -2,16 +2,16 @@
 <html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>عداد ون بيس</title>
+    <title>عداد الإجازة الصيفية</title>
     <link href="https://fonts.googleapis.com/css2?family=Bahij+Nassim:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/op-countdown/images/favicon.ico"/>
+    <link rel="icon" href="/summer/images/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
-    <meta name="description" content="العداد التنازلي لعودة أنمي ون بيس (إبريل 2025)"/>
-    <meta property="og:url" content="https://fiberahmed.com/op-countdown"/>
-    <meta property="og:title" content="ون بيس - One Piece Countdown"/>
-    <meta property="og:description" content="العداد التنازلي لعودة أنمي ون بيس (إبريل 2025)"/>
-    <meta property="og:image" content="https://raw.githubusercontent.com/FiberAhmed/op-countdown/refs/heads/main/op-countdown/images/icon.PNG"/>
+    <meta name="description" content="العداد التنازلي للإجازة الصيفية بالسعودية"/>
+    <meta property="og:url" content="https://fiberahmed.com/summer"/>
+    <meta property="og:title" content="الإجازة الصيفية - Summer Vacation Countdown"/>
+    <meta property="og:description" content="العداد التنازلي للإجازة الصيفية (2025م)"/>
+    <meta property="og:image" content="https://raw.githubusercontent.com/FiberAhmed/summer/refs/heads/main/summer/images/icon.PNG"/>
     <style>
         @font-face {
             font-family: 'Bahij Nassim';
@@ -21,7 +21,7 @@
         body {
             font-family: 'Bahij Nassim', Arial, sans-serif;
             font-weight: 700;
-            background-image: url('/op-countdown/images/OP.jpg');
+            background-image: url('/summer/images/summer.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -56,25 +56,25 @@
     <div id="countdown">
         <div class="time-unit">
             <span id="seconds">00</span>
-            <span class="label">ثانية</span>
+            <span class="label">Sec</span>
         </div>
         <div class="time-unit">
             <span id="minutes">00</span>
-            <span class="label">دقيقة</span>
+            <span class="label">Min</span>
         </div>
         <div class="time-unit">
             <span id="hours">00</span>
-            <span class="label">ساعة</span>
+            <span class="label">Hour</span>
         </div>
         <div class="time-unit">
             <span id="days">00</span>
-            <span class="label">يوم</span>
+            <span class="label">Day</span>
         </div>
     </div>
 
     <script>
         function updateCountdown() {
-            const targetDate = new Date('2025-04-06T14:15:00Z');
+            const targetDate = new Date('2025-06-26T07:15:00Z');
             const now = new Date();
             const difference = targetDate - now;
 
